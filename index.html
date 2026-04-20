@@ -131,13 +131,14 @@
             border-radius: 3px;
         }
 
-        .polaroid p {
+        .polaroid p.caption {
             background: none;
             border: none;
             padding: 5px 0 0 0;
             font-size: 0.8rem;
             font-family: 'Satisfy', cursive;
             color: #d81b60;
+            text-align: center;
         }
 
         #surprise-content.show .polaroid {
@@ -184,25 +185,25 @@
         
         <div class="gallery">
             <div class="polaroid" style="--delay: 0.5s; --rotate: -6deg;">
-                <img src="https://github.com/sohom9143/Bitapta-Birthday/blob/main/Screenshot_20260421_003221_Instagram.jpg" alt="Memory 1">
-                <p>Best times! 💖</p>
+                <img src="https://raw.githubusercontent.com/sohom9143/Bitapta-Birthday/main/Screenshot_20260421_003324_Instagram.jpg" alt="Memory 1">
+                <p class="caption">Best times! 💖</p>
             </div>
             <div class="polaroid" style="--delay: 0.8s; --rotate: 5deg;">
-                <img src="https://github.com/sohom9143/Bitapta-Birthday/blob/main/Screenshot_20260421_003324_Instagram.jpg" alt="Memory 2">
-                <p>Always laughing 😂</p>
+                <img src="https://raw.githubusercontent.com/sohom9143/Bitapta-Birthday/main/Screenshot_20260421_003250_Instagram.jpg" alt="Memory 2">
+                <p class="caption">Always laughing 😂</p>
             </div>
             <div class="polaroid" style="--delay: 1.1s; --rotate: -3deg;">
-                <img src="https://github.com/sohom9143/Bitapta-Birthday/blob/main/Screenshot_20260421_003250_Instagram.jpg" alt="Memory 3">
-                <p>You're the best! 🌟</p>
+                <img src="https://raw.githubusercontent.com/sohom9143/Bitapta-Birthday/main/Screenshot_20260421_003221_Instagram.jpg" alt="Memory 3">
+                <p class="caption">You're the best! 🌟</p>
             </div>
         </div>
     </div>
 
     <script>
         function triggerSurprise() {
-            // 1. Play the music! (Browsers allow audio to play once the user taps)
+            // 1. Play the music! 
             const music = document.getElementById('bg-music');
-            music.play();
+            music.play().catch(e => console.log("Audio waiting for interaction"));
 
             // 2. Hide gift, change background
             document.getElementById('gift-container').style.display = 'none';
@@ -250,3 +251,4 @@
     </script>
 </body>
 </html>
+
